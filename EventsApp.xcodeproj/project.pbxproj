@@ -14,6 +14,8 @@
 		108315BD216AE4290024E6DF /* EventsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108315BC216AE4290024E6DF /* EventsAppTests.swift */; };
 		108315C8216AE4290024E6DF /* EventsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108315C7216AE4290024E6DF /* EventsAppUITests.swift */; };
 		108315DA216B1A1C0024E6DF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108315D9216B1A1C0024E6DF /* BaseViewController.swift */; };
+		108315DD216C10360024E6DF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108315DC216C10360024E6DF /* BaseView.swift */; };
+		10B054C0216C659000400CE5 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B054BF216C659000400CE5 /* EventView.swift */; };
 		8CADB6061E00902EDB63FD84 /* Pods_EventsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC8A38AA50B04ED2ACD3ED5 /* Pods_EventsAppTests.framework */; };
 		928B8A8AED6DDBCC9D2B09AD /* Pods_EventsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691EB98D653D65E7644F906A /* Pods_EventsAppUITests.framework */; };
 		E8F02F2E216B5F3F003F42BD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F02F2D216B5F3F003F42BD /* Repository.swift */; };
@@ -21,6 +23,8 @@
 		E8F02F33216B85C3003F42BD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F02F32216B85C3003F42BD /* Event.swift */; };
 		E8F02F35216B8A3B003F42BD /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F02F34216B8A3B003F42BD /* EventListViewController.swift */; };
 		E8F02F37216B9321003F42BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F02F36216B9321003F42BD /* Constants.swift */; };
+		E8F02F39216CD03E003F42BD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F02F38216CD03E003F42BD /* DateExtension.swift */; };
+		E8F02F3B216CD604003F42BD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F02F3A216CD604003F42BD /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,8 @@
 		108315C7216AE4290024E6DF /* EventsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAppUITests.swift; sourceTree = "<group>"; };
 		108315C9216AE4290024E6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		108315D9216B1A1C0024E6DF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		108315DC216C10360024E6DF /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		10B054BF216C659000400CE5 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		14252495A8EFD9939F95E87E /* Pods-EventsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventsApp/Pods-EventsApp.release.xcconfig"; sourceTree = "<group>"; };
 		34742D6717B822E3C1C8BFDD /* Pods-EventsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventsAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventsAppUITests/Pods-EventsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		691EB98D653D65E7644F906A /* Pods_EventsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +73,8 @@
 		E8F02F32216B85C3003F42BD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E8F02F34216B8A3B003F42BD /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		E8F02F36216B9321003F42BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E8F02F38216CD03E003F42BD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		E8F02F3A216CD604003F42BD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +176,7 @@
 		108315D5216B0EE90024E6DF /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				10B054BF216C659000400CE5 /* EventView.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -185,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				108315D9216B1A1C0024E6DF /* BaseViewController.swift */,
+				108315DC216C10360024E6DF /* BaseView.swift */,
+				E8F02F3A216CD604003F42BD /* BaseTableViewCell.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 		108315D8216B0EE90024E6DF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E8F02F38216CD03E003F42BD /* DateExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -381,6 +393,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EventsApp/Pods-EventsApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BonMot/BonMot.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -389,6 +402,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BonMot.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPeasy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -443,12 +457,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8F02F30216B61C3003F42BD /* ServerRepository.swift in Sources */,
+				E8F02F39216CD03E003F42BD /* DateExtension.swift in Sources */,
 				E8F02F35216B8A3B003F42BD /* EventListViewController.swift in Sources */,
 				108315A8216AE4270024E6DF /* AppDelegate.swift in Sources */,
+				10B054C0216C659000400CE5 /* EventView.swift in Sources */,
+				E8F02F3B216CD604003F42BD /* BaseTableViewCell.swift in Sources */,
 				108315DA216B1A1C0024E6DF /* BaseViewController.swift in Sources */,
 				E8F02F37216B9321003F42BD /* Constants.swift in Sources */,
 				E8F02F2E216B5F3F003F42BD /* Repository.swift in Sources */,
 				E8F02F33216B85C3003F42BD /* Event.swift in Sources */,
+				108315DD216C10360024E6DF /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +643,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haile.EventsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -644,7 +662,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haile.EventsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
