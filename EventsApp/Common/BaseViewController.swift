@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class BaseViewController: UIViewController {
+    
+    private lazy var hud = MBProgressHUD.showAdded(to: self.view, animated: true)
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +32,14 @@ class BaseViewController: UIViewController {
     func configureContent() { }
     func configureStyle() { }
     func configureActions() { }
+    
+    func showHUD() {        
+        hud.show(animated: true)
+    }
+    
+    func hideHUD() {
+        hud.hide(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,6 +12,7 @@ pod "RxCocoa"
 pod "NSObject+Rx"
 pod "Alamofire"
 pod "BonMot"
+pod "MBProgressHUD"
 
   target 'EventsAppTests' do
     inherit! :search_paths

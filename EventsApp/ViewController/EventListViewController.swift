@@ -37,6 +37,7 @@ class EventListViewController: BaseViewController {
         tableView.register(EventTableViewCell.self, forCellReuseIdentifier: String(describing: EventTableViewCell.self))
         tableView.allowsSelection = false
         
+        showHUD()
         repository.loadEvents(from: AppConstants.EVENTS_URL)
             .map { items -> [Event] in
                 let list = items.filter { $0.availableSeats != 0 }
@@ -50,6 +51,7 @@ class EventListViewController: BaseViewController {
                 return list
             }
             .subscribe(onNext: { [weak self] list in
+                self?.hideHUD()
                 self?.eventList.append(contentsOf: list)
                 self?.tableView.reloadData()
                 
