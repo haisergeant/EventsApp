@@ -44,6 +44,7 @@ struct EventViewModel {
         }
     }
     
+    let model: Event
     let name: NSAttributedString
     let day: NSAttributedString
     let monthYear: NSAttributedString
@@ -54,6 +55,7 @@ struct EventViewModel {
     
     let labels: NSAttributedString
     init(model: Event, style: EventViewStyle = EventViewStyle()) {
+        self.model = model
         name = model.name.styled(with: style.nameStyle)
         day = model.date.day().styled(with: style.dayStyle)
         monthYear = (EventViewModel.monthFormatter.string(from: model.date)).styled(with: style.monthStyle)
@@ -123,7 +125,7 @@ class EventView: BaseView {
         )
         dayLabel.easy.layout(
             Left(10), Right(10), Top(10),
-            Size(50)
+            Size(>=50)
         )
         monthYearLabel.easy.layout(
             Top(10).to(dayLabel, .bottom),

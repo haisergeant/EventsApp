@@ -28,7 +28,7 @@ class EventListViewController: BaseViewController {
             Edges()
         )
     }
-    
+        
     override func configureContent() {
         super.configureContent()
         tableView.delegate = self
@@ -36,6 +36,7 @@ class EventListViewController: BaseViewController {
         tableView.estimatedRowHeight = UITableViewAutomaticDimension
         tableView.register(EventTableViewCell.self, forCellReuseIdentifier: String(describing: EventTableViewCell.self))
         tableView.allowsSelection = false
+        
         repository.loadEvents(from: AppConstants.EVENTS_URL)
             .map { items -> [Event] in
                 let list = items.filter { $0.availableSeats != 0 }
@@ -51,7 +52,29 @@ class EventListViewController: BaseViewController {
             .subscribe(onNext: { [weak self] list in
                 self?.eventList.append(contentsOf: list)
                 self?.tableView.reloadData()
+                
+                self?.printOutRequest()
             }).disposed(by: rx.disposeBag)
+    }
+    
+    override func shouldHideNavigationBar() -> Bool {
+        return false
+    }
+    
+    private func printOutRequest() {
+        // Display name, price and venue of the remaining events
+        print("---------------------------------------------")
+        print("Display name, price and venue of the remaining events")
+        eventList.forEach { model in
+            print("Event \(model.model.name) ($\(model.model.price)) at \(model.model.venue)")
+        }
+        
+        // Display name, price and venue of the events with a "play" label
+        print("---------------------------------------------")
+        print("Display name, price and venue of the events with a \"play\" label")
+        eventList.filter { $0.model.labels.contains("play") }.forEach { model in
+            print("Event \(model.model.name) ($\(model.model.price)) at \(model.model.venue)")
+        }
     }
 }
 
